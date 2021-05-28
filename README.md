@@ -1,0 +1,1 @@
+# Few-Shot-Semantic-Segmentation-on-Aerial-Images
