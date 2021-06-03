@@ -26,5 +26,5 @@ the overall network:
 
 ### Datasets and Data Preparation
 
-The newly provied dataset [**iSAID-5i**] (https://pan.baidu.com/s/1kGvYMkHoV1eBM1k4VSG-HA)        
+The newly provied dataset [**iSAID-5i**](https://pan.baidu.com/s/1kGvYMkHoV1eBM1k4VSG-HA)        
 (Password:nwpu)
