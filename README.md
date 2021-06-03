@@ -4,7 +4,7 @@ Codes and dataset (iSAID-5i) for Scale-aware Detailed Matching for Few-Shot Aeri
 
 the overall network:
 <p align="left">
-<img src="img/remote_sensing1.png" alt="the overall network" width="600px">
+<img src="img/remote_sensing1.png" alt="the overall network" width="700px">
 </p>
 some visualization results:
 the overall network:
