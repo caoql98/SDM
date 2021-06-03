@@ -1,1 +1,1 @@
-# Few-Shot-Semantic-Segmentation-on-Aerial-Images
+# Scale-aware Detailed Matching for Few-Shot Aerial Image Semantic Segmentation
