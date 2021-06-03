@@ -1,5 +1,5 @@
 # Scale-aware Detailed Matching for Few-Shot Aerial Image Semantic Segmentation
-Codes and dataset(iSAID-5^i) for progressive dual prior guided few-shot semantic segmentation, and the work is submitted in TGRS
+Codes and dataset(iSAID-5i) for progressive dual prior guided few-shot semantic segmentation, and the work is submitted in TGRS
 
 
 
@@ -17,6 +17,4 @@ Codes and dataset(iSAID-5^i) for progressive dual prior guided few-shot semantic
 
 ### Datasets and Data Preparation
 
-The dataset 
-
-The pretrained [**model**](https://pan.baidu.com/s/1qn_AhDbV5Q5XM-PpuKrNqQ) in **VOC_split0_1-shot** is provided as a sample. (Password:yd11)
+The newly provied dataset [**iSAID-5i**] (Password:yd11)
