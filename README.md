@@ -1,5 +1,5 @@
 # Scale-aware Detailed Matching for Few-Shot Aerial Image Semantic Segmentation
-Codes and dataset (iSAID-5i) for Scale-aware Detailed Matching for Few-Shot Aerial Image Semantic Segmentation, and the work is submitted in TGRS
+Codes and dataset (iSAID-5i) for Scale-aware Detailed Matching for Few-Shot Aerial Image Semantic Segmentation, and the work has been accepted by TGRS
 
 
 the overall network:
