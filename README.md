@@ -13,7 +13,15 @@ the overall network:
 </p>
 
 # Get Started
-
+### Training
+```
+cd scripts
+sh train_group0.sh
+```
+### Inference
+If you want to test all of the saved models, you can use:
+```
+python test_all_frame.py
 ### Environment
 + python == 3.7
 + pytorch1.0
