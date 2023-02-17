@@ -13,12 +13,12 @@ the overall network:
 </p>
 
 # Get Started
-### Training
+Training
 ```
 cd scripts
 sh train_group0.sh
 ```
-### Inference
+Inference
 If you want to test all of the saved models, you can use:
 ```
 python test_all_frame.py
