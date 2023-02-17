@@ -12,15 +12,15 @@ the overall network:
 <img src="img/remote_sensing_result.png" alt="the results" width="800px">
 </p>
 
-# Get Started
+### Get Started
 Training
-```
+
 cd scripts
 sh train_group0.sh
 ```
 Inference
 If you want to test all of the saved models, you can use:
-```
+
 python test_all_frame.py
 ### Environment
 + python == 3.7
@@ -42,5 +42,3 @@ The newly provied dataset [**iSAID-5i**](https://pan.baidu.com/s/1kGvYMkHoV1eBM1
 (Password:nwpu)
 or  [**iSAID-5i**](https://drive.google.com/file/d/17PQ1iKCbaj2OjwBdCn_VBh09ntI4lxgL/view?usp=sharing)
 
-
-The codes are coming soon...
