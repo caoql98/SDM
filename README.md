@@ -12,16 +12,17 @@ the overall network:
 <img src="img/remote_sensing_result.png" alt="the results" width="800px">
 </p>
 
-### Get Started
-Training
+
+###Training
 
 cd scripts
 sh train_group0.sh
-```
-Inference
+
+###Inference
 If you want to test all of the saved models, you can use:
 
 python test_all_frame.py
+
 ### Environment
 + python == 3.7
 + pytorch1.0
