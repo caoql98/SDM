@@ -12,15 +12,19 @@ the overall network:
 <img src="img/remote_sensing_result.png" alt="the results" width="800px">
 </p>
 
-
-
 # Get Started
 
 ### Environment
-+ torch==1.4.0 (torch version >= 1.0.1.post2 should be okay to run this repo)
-+ numpy==1.18.4
-+ tensorboardX==1.8
-+ cv2==4.2.0
++ python == 3.7
++ pytorch1.0
+
++ torchvision,
++ pillow,
++ opencv-python,
++ pandas,
++ matplotlib,
++ scikit-image
+
 
 
 
