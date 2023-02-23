@@ -4,7 +4,6 @@ import torch.nn.functional as F
 # from models.backbone import resnet_dialated as models1
 import numpy as np
 from models.backbone import resnet as models1
-from models.backbone import NetworkInNetwork as modeln
 from models.backbone import vgg as vgg_models
 from models import ASPP
 # from models.GRN import GRN
@@ -12,7 +11,6 @@ from models import ASPP
 # from models.PMMs import PMMs
 from torchvision import transforms
 from models.PMMs_single import PMMs
-# from models.mRN1 import mRN
 import math
 # The Code of baseline network is referenced from https://github.com/icoz69/CaNet
 # The code of training & testing is referenced from https://github.com/xiaomengyc/SG-One
@@ -706,131 +704,6 @@ class OneModel(nn.Module):
         # out = out + self.residule3(out)
         # out = self.drop01(out)
         out1 = self.layer1_9(out)+out2_1
-
-        # unloader = transforms.ToPILImage()
-        # for i in range(b):
-        #     out1_1 = F.interpolate(out1, query_rgb.shape[-2:], mode='bilinear', align_corners=True)
-        #     b,c,h,w = query_rgb.shape
-        #     out1_1 = F.softmax(out1_1,dim=1)
-        #     out1_1  = out1_1[:,1,:,:].view(b,1,h,w)
-        #     out1_1 = out1_1>0.5
-        #     image1 = out1_1[i,:,:,:].cpu().clone()  # clone the tensor
-        #         # image = image.squeeze(0)  # remove the fake batch dimension
-        #     # image1 = (image1*1).astype(np.uint8)
-        #     image1 = np.array(image1).astype(np.uint8)
-        #     image1 = torch.Tensor(image1)
-        #     image1 = unloader(image1)
-        #     image1.save('/disk2/caoqinglong/visualization1_1/pred1_'+str(i)+'.jpg')
-            
-        #     out1_1 = F.interpolate(out2, query_rgb.shape[-2:], mode='bilinear', align_corners=True)
-        #     b,c,h,w = query_rgb.shape
-        #     out1_1 = F.softmax(out1_1,dim=1)
-        #     out1_1  = out1_1[:,1,:,:].view(b,1,h,w)
-        #     out1_1 = out1_1>0.5
-        #     image1 = out1_1[i,:,:,:].cpu().clone()  # clone the tensor
-        #         # image = image.squeeze(0)  # remove the fake batch dimension
-        #     # image1 = (image1*1).astype(np.uint8)
-        #     image1 = np.array(image1).astype(np.uint8)
-        #     image1 = torch.Tensor(image1)
-        #     image1 = unloader(image1)
-        #     image1.save('/disk2/caoqinglong/visualization1_1/pred2_'+str(i)+'.jpg')
-            
-        #     out1_1 = F.interpolate(out3, query_rgb.shape[-2:], mode='bilinear', align_corners=True)
-        #     b,c,h,w = query_rgb.shape
-        #     out1_1 = F.softmax(out1_1,dim=1)
-        #     out1_1  = out1_1[:,1,:,:].view(b,1,h,w)
-        #     out1_1 = out1_1>0.5
-        #     image1 = out1_1[i,:,:,:].cpu().clone()  # clone the tensor
-        #         # image = image.squeeze(0)  # remove the fake batch dimension
-        #     # image1 = (image1*1).astype(np.uint8)
-        #     image1 = np.array(image1).astype(np.uint8)
-        #     image1 = torch.Tensor(image1)
-        #     image1 = unloader(image1)
-        #     image1.save('/disk2/caoqinglong/visualization1_1/pred3_'+str(i)+'.jpg')
-            
-        #     out1_1 = F.interpolate(out4, query_rgb.shape[-2:], mode='bilinear', align_corners=True)
-        #     b,c,h,w = query_rgb.shape
-        #     out1_1 = F.softmax(out1_1,dim=1)
-        #     out1_1  = out1_1[:,1,:,:].view(b,1,h,w)
-        #     out1_1 = out1_1>0.5
-        #     image1 = out1_1[i,:,:,:].cpu().clone()  # clone the tensor
-        #         # image = image.squeeze(0)  # remove the fake batch dimension
-        #     # image1 = (image1*1).astype(np.uint8)
-        #     image1 = np.array(image1).astype(np.uint8)
-        #     image1 = torch.Tensor(image1)
-        #     image1 = unloader(image1)
-        #     image1.save('/disk2/caoqinglong/visualization1_1/pred4_'+str(i)+'.jpg')
-            
-        #     # out1_1 = F.interpolate(out1, query_rgb.shape[-2:], mode='bilinear', align_corners=True)
-        #     # b,c,h,w = query_rgb.shape
-        #     # out1_3 = F.softmax(out1_1,dim=1)
-        #     # out1_1 = out1_3[:,0,:,:].view(b,1,h,w)
-        #     # out1_2 = out1_3[:,1,:,:].view(b,1,h,w)
-            
-        #     # image1 = out1_1[i,:,:,:].cpu().clone()  # clone the tensor
-        #     #     # image = image.squeeze(0)  # remove the fake batch dimension
-        #     # # image1 = (image1*1).astype(np.uint8)
-        #     # # image1 = np.array(image1).astype(np.uint8)
-        #     # # image1 = torch.Tensor(image1)
-        #     # image1 = unloader(image1)
-        #     # image1.save('/disk2/caoqinglong/visualization1_1/out1_b'+str(i)+'.jpg')
-            
-        #     # image1 = out1_2[i,:,:,:].cpu().clone()  # clone the tensor
-        #     #     # image = image.squeeze(0)  # remove the fake batch dimension
-        #     # # image1 = (image1*1).astype(np.uint8)
-        #     # # image1 = np.array(image1).astype(np.uint8)
-        #     # # image1 = torch.Tensor(image1*255)
-        #     # image1 = unloader(image1)
-        #     # image1.save('/disk2/caoqinglong/visualization1_1/out1_f'+str(i)+'.jpg')
-            
-            
-            
-        #     out1_1 = F.interpolate(query_mask, query_rgb.shape[-2:], mode='bilinear', align_corners=True)
-        #     b,c,h,w = query_rgb.shape
-        #     out1_1  = out1_1.view(b,1,h,w)
-            
-        #     image1 = out1_1[i,:,:,:].cpu().clone()  # clone the tensor
-        #         # image = image.squeeze(0)  # remove the fake batch dimension
-        #     image1 = unloader(image1)
-        #     image1.save('/disk2/caoqinglong/visualization1_1/GT_'+str(i)+'.jpg')
-            
-        #     # out1_1 = F.interpolate(out2, query_rgb.shape[-2:], mode='bilinear', align_corners=True)
-        #     # b,c,h,w = query_rgb.shape
-        #     # out1_1 = F.softmax(out1_1,dim=1)
-        #     # out1_1  = out1_1[:,1,:,:].view(b,1,h,w)
-        #     # out1_1 = out1_1>0.5
-        #     # image1 = out1_1[i,:,:,:].cpu().clone()  # clone the tensor
-        #     #     # image = image.squeeze(0)  # remove the fake batch dimension
-        #     # # image1 = (image1*1).astype(np.uint8)
-        #     # image1 = np.array(image1).astype(np.uint8)
-        #     # image1 = torch.Tensor(image1)
-        #     # image1 = unloader(image1)
-        #     # image1.save('/disk2/caoqinglong/visualization1_1/pred2_'+str(i)+'.jpg')
-            
-            
-        #     # out1_1 = F.interpolate(corr_query_f, query_rgb.shape[-2:], mode='bilinear', align_corners=True)
-        #     # b,c,h,w = query_rgb.shape
-        #     # out1_1  = out1_1.view(b,1,h,w)
-            
-        #     # image1 = out1_1[i,:,:,:].cpu().clone()  # clone the tensor
-        #     #     # image = image.squeeze(0)  # remove the fake batch dimension
-        #     # image1 = unloader(image1)
-        #     # image1.save('/disk2/caoqinglong/visualization1_1/prior_f_'+str(i)+'.jpg')
-            
-        #     # out1_1 = F.interpolate(corr_query_b, query_rgb.shape[-2:], mode='bilinear', align_corners=True)
-        #     # b,c,h,w = query_rgb.shape
-        #     # out1_1  = out1_1.view(b,1,h,w)
-            
-        #     # image1 = out1_1[i,:,:,:].cpu().clone()  # clone the tensor
-        #     #     # image = image.squeeze(0)  # remove the fake batch dimension
-        #     # image1 = unloader(image1)
-        #     # image1.save('/disk2/caoqinglong/visualization1_1/prior_b_'+str(i)+'.jpg')
-            
-        # print('ok')
-
- 
-        # return torch.sigmoid(upscore_dsn1), torch.sigmoid(upscore_dsn3),  torch.sigmoid(upscore_dsn5), torch.sigmoid(upscore_dsn6)
-        # return out1,out2,out3, out4, out_map
         return out1,out2,out3, out4
 
     def get_loss(self, logits,query_label, idx):
@@ -845,29 +718,7 @@ class OneModel(nn.Module):
         out2= F.upsample(out2, size=(w, h), mode='bilinear')
         out3= F.upsample(out3, size=(w, h), mode='bilinear')
         out4= F.upsample(out4, size=(w, h), mode='bilinear')
-        
-        # out_map= F.upsample(out_map, size=(w, h), mode='bilinear')
-        # nb = (1-query_label).sum(dim=[1,2,3],keepdim=True)
-        # nf = query_label.sum(dim=[1,2,3],keepdim=True)
-        # # print(nb.view(b))
-        # out_mapb = out_map*(1-query_label)
-        # out_mapf = out_map*query_label
-        # pb = out_mapb.sum(dim=[1,2,3],keepdim=True)/nb
-        # pf = out_mapf.sum(dim=[1,2,3],keepdim=True)/nf
-
-        # out_mapb = (out_map-pb)*(1-query_label)
-        # out_mapf = (out_map-pf)*query_label
-        # b,c,h,w = pf.shape
-
-        # b_score = -4*((out_mapb.pow(2).sum(dim=[1,2,3]))/nb.view(b))+1
-        # f_score = -4*((out_mapf.pow(2).sum(dim=[1,2,3]))/nf.view(b))+1
-        
-        # b_score = -torch.log(b_score)
-        # f_score = -torch.log(f_score)
-        
-        # w_score = -torch.log((pf.view(b)-pb.view(b))**2)
-        # loss_nn = 5*b_score+5*f_score+1*w_score
-        # loss_nn = torch.mean(loss_nn)/20
+     
         
         b, c, w, h = query_label.size()
         query_label = query_label.view(b, -1)
