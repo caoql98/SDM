@@ -43,3 +43,14 @@ The newly provied dataset [**iSAID-5i**](https://pan.baidu.com/s/1kGvYMkHoV1eBM1
 (Password:nwpu)
 or  [**iSAID-5i**](https://drive.google.com/file/d/17PQ1iKCbaj2OjwBdCn_VBh09ntI4lxgL/view?usp=sharing)
 
+### BibTex
+```BibTex
+@article{yao2021scale,
+  title={Scale-aware detailed matching for few-shot aerial image semantic segmentation},
+  author={Yao, Xiwen and Cao, Qinglong and Feng, Xiaoxu and Cheng, Gong and Han, Junwei},
+  journal={IEEE Transactions on Geoscience and Remote Sensing},
+  volume={60},
+  pages={1--11},
+  year={2021},
+  publisher={IEEE}
+}
